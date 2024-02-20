@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111015;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+  color: #fff;
+}
+
+main {
+  padding: 5vh 5vw;
+}
+main header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 5vh;
+}
+main header .location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main header .location img {
+  width: 20px;
+}
+main header .location h3 {
+  font-weight: 300;
+  font-size: 14px;
+}
+main header .search {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+}
+main header .search .searchbar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 50px;
+  padding: 15px;
+}
+main header .search .searchbar img {
+  width: 15px;
+}
+main header .search .searchbar input {
+  outline: none;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+  width: 100%;
+}
+main header .search .suggestion {
+  position: absolute;
+  top: 46px;
+  width: 50%;
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+}
+main header .search .suggestion p {
+  background-color: #1e1e1e;
+  padding: 20px 25px;
+  border-top: solid #272727 1px;
+}
+main header .search .suggestion p:last-child {
+  border-radius: 0 0 10px 10px;
+}
+main header .search .suggestion p:hover {
+  background-color: #202020;
+}
+main .cards {
+  display: flex;
+  margin-bottom: 50px;
+  gap: 25px;
+  overflow-x: auto;
+}
+main .cards::-webkit-scrollbar {
+  display: none;
+}
+main .cards .card {
+  background-color: #1e1e1e;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+}
+main .cards .card p {
+  font-size: 16px;
+}
+main .cards .card img {
+  width: 35px;
+  margin: 25px 0 15px 0;
+}
+main .cards .card h5 {
+  font-size: 20px;
+}
+main .cards .card:first-child {
+  margin-left: 0;
+}
+main .actuellement {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+main .actuellement .main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+main .actuellement .main-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+main .actuellement .main-card img {
+  width: 35px;
+  margin: 0 0 15px 0;
+}
+main .actuellement .main-card h5 {
+  font-size: 20px;
+}
+main .actuellement .main-card h6 {
+  font-weight: 100;
+  opacity: 0.5;
+  color: #fff;
+  margin-top: 30px;
+}
+main .actuellement .details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex-grow: 2.5;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .actuellement .details .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+main .actuellement .details .card {
+  background-color: #1e1e1e;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  width: 100px;
+  flex-grow: 1;
+}
+main .actuellement .details .card .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+main .actuellement .details .card .content img {
+  width: 20px;
+  margin-right: 10px;
+}
+main .actuellement .details .card .content h5 {
+  font-size: 16px;
+  font-weight: 300;
+}
+main .actuellement .details .card p {
+  font-size: 16px;
+}
+
+.credit {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 12px;
+  opacity: 0.2;
+}
+.credit a {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .actuellement {
+    flex-wrap: wrap;
+  }
+  header {
+    flex-direction: column;
+  }
+  header .search {
+    width: 100%;
+  }
+  main {
+    padding: 5vh 5vw;
+  }
+}/*# sourceMappingURL=style.css.map */

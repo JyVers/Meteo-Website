@@ -1,0 +1,209 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background-color: #111015;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto';
+    color: #fff;
+}
+
+main{
+    padding: 5vh 5vw;
+    header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        gap: 5vh;
+
+        .location{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img{
+                width: 20px;
+            }
+            h3{
+                font-weight: 300;
+                font-size: 14px;
+            }
+        }
+
+        .search{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            flex-grow: 1;
+            .searchbar{
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                background-color: #1e1e1e;
+                border-radius: 50px;
+                padding: 15px;
+                img{
+                    width: 15px;
+                }
+                input{
+                    outline: none;
+                    border: none;
+                    background-color: #1e1e1e;
+                    color: #fff;
+                    width: 100%;
+                }
+            }
+            .suggestion{
+                position: absolute;
+                top: 46px;
+                width: 50%;
+                margin-left: 45px;
+                display: flex;
+                flex-direction: column;
+                p{
+                    background-color: #1e1e1e;
+                    padding: 20px 25px;
+                    border-top: solid #272727 1px;
+                }
+                p:last-child{
+                    border-radius: 0 0 10px 10px;
+                }
+                p:hover{
+                    background-color: lighten(#1e1e1e, .8);
+                }
+            }
+        }
+    }
+
+    .cards{
+        display: flex;
+        margin-bottom: 50px;
+        gap: 25px;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }        
+        .card{
+            background-color: #1e1e1e;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            width: 100%;
+            p{
+                font-size: 16px;
+            }
+            img{
+                width: 35px;
+                margin: 25px 0 15px 0;
+            }
+            h5{
+                font-size: 20px;
+            }
+        }
+        .card:first-child{
+            margin-left: 0;
+        }
+    }
+
+    .actuellement{
+        display: flex;
+        gap: 25px;
+        margin-top: 30px;
+
+        .main-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1e1e1e;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            flex-grow: 1;
+            p{
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            img{
+                width: 35px;
+                margin: 0 0 15px 0;
+            }
+            h5{
+                font-size: 20px;
+            }
+            h6{
+                font-weight: 100;
+                opacity: .5;
+                color: #fff;
+                margin-top: 30px;
+            }
+        }
+
+        .details{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            flex-grow: 2.5;
+
+            .row{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+            }
+            .card{
+                background-color: #1e1e1e;
+                padding: 25px;
+                text-align: center;
+                border-radius: 10px;
+                width: 100px;
+                flex-grow: 1;
+                .content{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 25px;
+                    img{
+                        width: 20px;
+                        margin-right: 10px;
+                    }
+                    h5{
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.credit{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 12px;
+    opacity: .2;
+    a{
+        color: #fff;
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+    .actuellement{
+        flex-wrap: wrap;
+    }
+    header{
+        flex-direction: column;
+        .search{
+            width: 100%;
+        }
+    }
+    main{
+        padding: 5vh 5vw;
+    }
+}
